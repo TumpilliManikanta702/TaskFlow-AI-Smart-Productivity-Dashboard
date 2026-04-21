@@ -291,6 +291,12 @@ const Dashboard = () => {
                 placeholder="Enter your goal (e.g., launch a project plan)"
                 value={goal}
                 onChange={(e) => setGoal(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    e.preventDefault();
+                    askAISuggestion();
+                  }
+                }}
                 className="w-full rounded-3xl border border-slate-700 bg-slate-950/80 px-4 py-3 text-slate-100 placeholder:text-slate-500 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
               />
               <button
