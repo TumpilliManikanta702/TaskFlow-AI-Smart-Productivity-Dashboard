@@ -5,6 +5,7 @@
   "scripts": {
     "postinstall": "cd server && npm install && cd ../client && npm install",
     "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\"",
+    "build": "cd client && npm run build",
     "start": "cd server && npm start"
   },
   "devDependencies": {
